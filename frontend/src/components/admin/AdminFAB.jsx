@@ -17,22 +17,15 @@ export default function AdminFAB() {
 
   const fabActions = [
     {
-      title: "Add Booking",
-      path: "/admin/bookings/add",
-      icon: <Calendar className="w-5 h-5" />,
-      color: "bg-blue-500 hover:bg-blue-600",
-      description: "Create new booking"
-    },
-    {
       title: "Add Worker",
-      path: "/admin/workers/add",
+      path: "/admin/workers/",
       icon: <UserPlus className="w-5 h-5" />,
       color: "bg-green-500 hover:bg-green-600",
       description: "Register new worker"
     },
     {
       title: "Add Service",
-      path: "/admin/services/add",
+      path: "/admin/services/",
       icon: <Briefcase className="w-5 h-5" />,
       color: "bg-purple-500 hover:bg-purple-600",
       description: "Create new service"

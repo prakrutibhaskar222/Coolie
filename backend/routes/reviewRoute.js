@@ -9,7 +9,7 @@ import { protect } from "../src/middleware/authMiddleware.js";
 const router = express.Router();
 
 /* 🔐 Logged-in users only */
-router.post("/create", protect, createReview);
+router.post("/create", createReview);
 
 /* 🌍 Public */
 router.get("/service/:serviceId", getReviewsForService);

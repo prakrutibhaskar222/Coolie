@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
-/* VERIFY TOKEN */
 export const protect = async (req, res, next) => {
   try {
     const auth = req.headers.authorization;
@@ -18,8 +17,7 @@ export const protect = async (req, res, next) => {
     res.status(401).json({ message: "Token invalid" });
   }
 };
-
-/* ROLE CHECK */
+ 
 export const allowRoles = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {

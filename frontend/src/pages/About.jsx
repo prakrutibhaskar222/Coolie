@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+
+import { Link } from "react-router";
 import { Users, Target, Award, Heart, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button, Card, Badge } from "../components/ui";
 import { useAutoRefresh } from "../hooks/useAutoRefresh";
@@ -54,30 +56,26 @@ export default function About() {
 
   const team = [
     {
-      name: "Rajesh Kumar",
+      name: "PRAKRUTI BHASKAR",
       role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
       bio: "10+ years in home services industry",
       social: { linkedin: "#", twitter: "#" }
     },
     {
-      name: "Priya Sharma",
+      name: "R VANDANAA",
       role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
       bio: "Tech leader with expertise in platform development",
       social: { linkedin: "#", twitter: "#" }
     },
     {
-      name: "Amit Patel",
+      name: "PRANAV RAGHURAMAN",
       role: "Head of Operations",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
       bio: "Operations expert ensuring service quality",
       social: { linkedin: "#", twitter: "#" }
     },
     {
-      name: "Sneha Gupta",
+      name: "PRIYA K C ",
       role: "Customer Success Manager",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
       bio: "Dedicated to customer satisfaction and support",
       social: { linkedin: "#", twitter: "#" }
     }
@@ -249,11 +247,7 @@ export default function About() {
               >
                 <Card hover className="text-center">
                   <div className="relative mb-6">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto object-cover"
-                    />
+                   
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>

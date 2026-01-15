@@ -1,6 +1,5 @@
 import Notification from "../models/Notification.js";
-
-/* ================= GET NOTIFICATIONS ================= */
+ 
 export const getNotifications = async (req, res) => {
   try {
     const notifications = await Notification.find({
@@ -20,8 +19,7 @@ export const getNotifications = async (req, res) => {
     });
   }
 };
-
-/* ================= MARK ONE AS READ ================= */
+ 
 export const markAsRead = async (req, res) => {
   try {
     await Notification.findByIdAndUpdate(req.params.id, {
@@ -32,9 +30,7 @@ export const markAsRead = async (req, res) => {
   } catch {
     res.status(500).json({ success: false });
   }
-};
-
-/* ================= MARK ALL AS READ ================= */
+}; 
 export const markAllAsRead = async (req, res) => {
   try {
     await Notification.updateMany(
