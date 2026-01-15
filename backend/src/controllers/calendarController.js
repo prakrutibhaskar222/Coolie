@@ -1,5 +1,4 @@
 import Booking from "../models/Booking.js";
-import Worker from "../models/Worker.js";
 
 /**
  * Get all bookings for a specific worker (Worker Calendar)

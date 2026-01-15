@@ -1,6 +1,5 @@
 import cron from "node-cron";
 import Booking from "../models/Booking.js";
-import Worker from "../models/Worker.js";
 import { generateOTP } from "../utils/otp.js";
 import { sendBookingReminderEmail } from "../utils/sendBookingRemainderEmail.js";
 

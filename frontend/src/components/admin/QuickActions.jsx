@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
-  Plus, 
+  Home, 
   UserPlus, 
   Calendar, 
   Briefcase, 
@@ -10,18 +10,19 @@ import {
   MessageSquare,
   Settings,
   BarChart3,
-  Zap
+  Zap,
+  CalendarCheck
 } from "lucide-react";
 
 export default function QuickActions({ onActionClick }) {
   const quickActions = [
     {
-      title: "Add Booking",
-      subtitle: "New",
-      path: "/admin/bookings/add",
-      icon: <Plus className="w-4 h-4" />,
+      title: "Dashboard",
+      subtitle: "home",
+      path: "/admin",
+      icon: <Home className="w-5 h-5" />,
       color: "bg-blue-500 hover:bg-blue-600",
-      description: "Create a new booking manually"
+      description: "Dashboard"
     },
     {
       title: "Add Worker",
@@ -34,7 +35,7 @@ export default function QuickActions({ onActionClick }) {
     {
       title: "Add Service",
       subtitle: "Create",
-      path: "/admin/services/add",
+      path: "/admin/services",
       icon: <Briefcase className="w-4 h-4" />,
       color: "bg-purple-500 hover:bg-purple-600",
       description: "Add a new service offering"
@@ -48,13 +49,12 @@ export default function QuickActions({ onActionClick }) {
       icon: <BarChart3 className="w-4 h-4" />,
       color: "bg-orange-500 hover:bg-orange-600"
     },
-    {
-      title: "Pending Verifications",
-      path: "/admin/workers/verify",
-      icon: <UserPlus className="w-4 h-4" />,
-      color: "bg-yellow-500 hover:bg-yellow-600",
-      badge: "3"
-    },
+     {
+    title: "View Bookings",
+    path: "/admin/bookings",
+    icon: <CalendarCheck className="w-4 h-4" />,
+    color: "bg-yellow-500 hover:bg-yellow-600",
+  },
     {
       title: "System Settings",
       path: "/admin/settings",

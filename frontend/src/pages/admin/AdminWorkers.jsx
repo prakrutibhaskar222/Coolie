@@ -62,7 +62,10 @@ const AdminWorkers = () => {
               ) : (
                 workers.map((w) => (
                   <tr key={w._id} className="border-b">
-                    <td className="p-2">{w.name}</td>
+                    <td className="p-2">
+  {w.name || w.email?.split("@")[0] || "—"}
+</td>
+
                     <td className="p-2">{w.email}</td>
                     <td className="p-2">{w.phone || "-"}</td>
                   </tr>

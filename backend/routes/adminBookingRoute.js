@@ -12,7 +12,10 @@ const router = express.Router();
 router.use(protect);
 router.use(allowRoles("admin"));
 
-router.patch("/:id/assign-worker",assignWorker);
+router.put(
+  "/bookings/:id/assign",
+  assignWorker
+);
 router.patch("/:id/payment", markPayment);
 router.patch("/:id/status", updateBookingStatus);
 

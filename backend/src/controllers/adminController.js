@@ -2,7 +2,6 @@
 import bcrypt from "bcryptjs";
 import User from "../models/User.js";
 import Booking from "../models/Booking.js"; 
-import Worker from "../models/Worker.js";
 
 // Get all users
 export const getAllUsers = async (req, res) => {
@@ -81,9 +80,19 @@ export const registerWorker = async (req, res) => {
 };
 
 export const getAllWorkers = async (req, res) => {
-  const workers = await User.find({ role: "worker" }).select("-password");
-  res.json({ success: true, data: workers });
+  try {
+    const workers = await User.find({ role: "worker" })
+      .select("name email phone role createdAt");
+
+    res.json({
+      success: true,
+      data: workers
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
+
 
 
 /* ================= GET PENDING WORKERS ================= */

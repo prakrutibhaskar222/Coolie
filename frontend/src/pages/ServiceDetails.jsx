@@ -23,7 +23,6 @@ export default function ServiceDetails() {
 
   const [service, setService] = useState(null);
   const [reviews, setReviews] = useState([]);
-            console.log("REVIEWS:", reviews);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 

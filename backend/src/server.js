@@ -39,7 +39,8 @@ app.use("/api/profile", profileRoute);
 app.use("/api/users", userRoutes);
 app.use("/api/user/favorites", favoritesRoute);
 app.use("/api/notifications", notificationRoute);
-app.use("/api/admin/bookings", adminBookingRoute);
+app.use("/api", adminBookingRoute);
+
 
 // Health check
 app.get("/", (req, res) => res.send("API is running..."));

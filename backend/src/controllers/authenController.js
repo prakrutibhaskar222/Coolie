@@ -2,7 +2,6 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
-import Worker from "../models/Worker.js";
 import {sendEmail} from "../utils/sendEmail.js";
 import { validatePasswordStrength } from "../utils/passwordPolicy.js";
 

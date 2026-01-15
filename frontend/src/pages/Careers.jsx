@@ -367,15 +367,7 @@ export default function Careers() {
                     {job.description}
                   </p>
                   
-                  <Button 
-                    variant="outline" 
-                    className="w-full"
-                    autoRefresh={true}
-                    refreshDelay={800}
-                  >
-                    View Details
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  
                 </Card>
               </motion.div>
             ))}
@@ -442,19 +434,6 @@ export default function Careers() {
                   ></textarea>
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-2">
-                    Resume/CV
-                  </label>
-                  <div className="border-2 border-dashed border-neutral-300 rounded-xl p-8 text-center hover:border-primary-400 transition-colors">
-                    <div className="text-neutral-500 mb-2">
-                      Drop your resume here or click to browse
-                    </div>
-                    <Button variant="ghost" size="sm">
-                      Choose File
-                    </Button>
-                  </div>
-                </div>
                 
                 <Button 
                   type="submit" 

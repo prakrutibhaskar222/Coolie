@@ -42,7 +42,6 @@ export default function HomePage() {
   // Fetch categories function
   const fetchCategories = async (source = 'initial') => {
     try {
-      console.log(`Fetching categories from ${source}`);
       const res = await fetch(`${API}/api/categories`);
       const json = await res.json();
       if (json.success) {

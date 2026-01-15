@@ -2,22 +2,22 @@
 import Booking from "../models/Booking.js";
 
 export const assignWorker = async (req, res) => {
+  const { id } = req.params;
   const { workerId } = req.body;
 
-  if (!workerId)
-    return res.status(400).json({ success: false, message: "Worker required" });
+  const booking = await Booking.findById(id);
+  if (!booking) {
+    return res.status(404).json({ success: false, message: "Booking not found" });
+  }
 
-  const booking = await Booking.findByIdAndUpdate(
-    req.params.id,
-    {
-      workerId,
-      status: "assigned",
-    },
-    { new: true }
-  );
+  booking.workerId = workerId;
+  booking.status = "assigned";
+  await booking.save();
 
   res.json({ success: true, data: booking });
 };
+
+
 
 export const markPayment = async (req, res) => {
   const { paymentStatus } = req.body;
